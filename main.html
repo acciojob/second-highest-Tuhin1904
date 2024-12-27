@@ -10,6 +10,13 @@
 	<script>
 		function secondHighest(arr) {
 			//Write your code here
+			 if (arr.length < 2) {
+			    return -Infinity;
+			  }
+			const newSorted = [...new Set(arr)].sort((a,b) => a-b);
+
+			return newSorted.length < 2 ? -Infinity : newSorted[1]
+			
 			
 		}
 
